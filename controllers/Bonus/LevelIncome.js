@@ -17,7 +17,7 @@ export const LevelIncome = async (req, res) => {
 
   try {
 
-    const fiveMinutesAgo = new Date(Date.now() - 60 * 60 * 1000); // for 2 min
+    const fiveMinutesAgo = new Date(Date.now() - 120 * 60 * 1000); // for 2 min
 
     const FindDailyReward = await DailyReward.find({ createdAt: { $gt: fiveMinutesAgo } }).lean();
 
